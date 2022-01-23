@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>tawakkalna</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- css files -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="144x144" href="../media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="../../index.html">
+                    <img class="navIcon notClicked" src="../media/nav/home.svg" alt="">
+                    <img class="navIcon clicked" src="../media/nav/homeClicked.svg" alt="">
+                    <span>الرئيسية</span>
+                </a>
+            </li>
+            <li class="clicked">
+                <a href="#">
+                    <img class="navIcon notClicked" src="../media/nav/services.svg" alt="">
+                    <img class="navIcon clicked" src="../media/nav/servicesClicked.svg" alt="">
+                    <span>الخدمات</span>
+                </a>
+            </li>
+            <li>
+                <a href="./wallet.html">
+                    <img class="navIcon notClicked" src="../media/nav/wallet.svg" alt="">
+                    <img class="navIcon clicked" src="../media/nav/walletClicked.svg" alt="">
+                    <span class="wallet">المحفظة الرقمية</span>
+                </a>
+            </li>
+            <li>
+                <a href="./dashbord.html">
+                    <img class="navIcon notClicked" src="../media/nav/dashbord.svg" alt="">
+                    <img class="navIcon clicked" src="../media/nav/dashbordClicked.svg" alt="">
+                    <span>لوحة البيانات</span>
+                </a>
+            </li>
+            <li>
+                <a href="./profile.html">
+                    <img class="navIcon notClicked" src="../media/nav/profil.svg" alt="">
+                    <img class="navIcon clicked" src="../media/nav/profilClicked.svg" alt="">
+                    <span>حسابي</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="servicesMainContainer">
+        <div class="puplicServices">
+            <p class="serTitle">الخدمات العامة</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/familyincurince.svg" alt="">
+                    <p>تعريف رقم الجوال</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/twkpass.svg" alt="">
+                    <p>رمز توكلنا</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/datdtjweed.svg" alt="">
+                    <p>تجويد البيانات</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices">
+            <p class="serTitle">خدمات التصاريح</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/personaltsareh.svg" alt="">
+                    <p>التصاريح الشخصية</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/gethering.svg" alt="">
+                    <p>تصاريح التحقق الآلي للحالة الصحية</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/barcod.svg" alt="">
+                    <p>ماسح كود التحقق</p>
+                    <input id="barcodScan" type="file" capture="user" accept="image/"
+                        onclick="setTimeout(function(){window.close()}, 2000)" />
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/getheringcheck.svg" alt="">
+                    <p>إصدار تصريح تحقق آلي للحالة الصحية</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices">
+            <p class="serTitle">خدمات الصحة</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/warning.svg" alt="">
+                    <p>الوضع الحذر</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/coronatest.svg" alt="">
+                    <p>فحص كورونا</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/qustin.svg" alt="">
+                    <p>اسأل عن مساعدة</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/vaccsin.svg" alt="">
+                    <p>لقاح كورونا</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/aada.svg" alt="">
+                    <p>التبرع بالأعضاء</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/asfni.svg" alt="">
+                    <p>أسعفني</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/sos.svg" alt="">
+                    <p>نداء استغاثة</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices">
+            <p class="serTitle">خدمات الحج والعمرة</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/files.svg" alt="">
+                    <p>التصاريح</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/tsareh.svg" alt="">
+                    <p>إصدار التصاريح</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/buscar.svg" alt="">
+                    <p>خدمات النقل</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/morafqin.svg" alt="">
+                    <p>إدارة المرافقين</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices">
+            <p class="serTitle">خدمات السفر</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/helthyPassport.svg" alt="">
+                    <p>الجواز الصحي</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/travil.svg" alt="">
+                    <p>متطلبات السفر الصحية</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices">
+            <p class="serTitle">خدمات التعليم</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/studyresult.svg" alt="">
+                    <p>الحالة الدراسية للأبناء</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/madrasti.svg" alt="">
+                    <p>بينات منصة مدرستي</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/award.svg" alt="">
+                    <p>النتائج الدراسية</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/absent.svg" alt="">
+                    <p>إشعار بحالة صحية</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices">
+            <p class="serTitle">خدمات أفراد الأسرة</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/helthcardcondition.svg" alt="">
+                    <p>بطاقة الوضع الصحي</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/familycare.svg" alt="">
+                    <p>رعاية أفراد الأسرة</p>
+                </div>
+                <div class="servicesItem">
+                    <img src="../media/services/familyincurince.svg" alt="">
+                    <p>أفراد الأسرة والمكفولين</p>
+                </div>
+            </div>
+        </div>
+        <div class="puplicServices" style="margin-bottom: 85px;">
+            <p class="serTitle">خدمات الفعاليات</p>
+            <div class="servicesContainer">
+                <div class="servicesItem">
+                    <img src="../media/services/teckets.svg" alt="">
+                    <p>التذاكر</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

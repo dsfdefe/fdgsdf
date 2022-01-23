@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'test';
+    src: url('../font/regular.ttf');
+    font-style: normal;
+}
+html {
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: test;
+    user-select: none;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eee;
+    overflow-x: hidden;
+}
+.nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 1000;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+.nav ul li.clicked span {
+    color: #42ae9f;
+}
+.nav ul li img.clicked {
+    display: none;
+}
+.nav ul li img.notClicked {
+    display: inline-block;
+}
+.nav ul li.clicked img.notClicked {
+    display: none;
+}
+.nav ul li.clicked img.clicked {
+    display: inline-block;
+}
+.nav ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0 15px;
+    font-size: 0.75em;
+    font-weight: 500;
+    text-decoration: none;
+    color: #222;
+}
+.nav ul li .wallet {
+    font-size: 0.75em;
+}
+.navIcon {
+    width: 35px;
+    height: 35px;
+}
+
+.mainContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.mainContainer .bill {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 1%;
+    left: 1%;
+}
+.nameCard {
+    position: relative;
+    width: 75%;
+    height: 197px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    padding-top: 10px;
+    border-radius: 15px;
+    background: url('../media/cardbgsvg_for_os_seix.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #38978a;
+}
+.nameCard .personImg {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2.5px solid #42ae9f;
+}
+.nameCard p {
+    font-size: 18px;
+}
+.nameCard .personName {
+    font-size: 20px;
+}
+.nameCard .idNum {
+    transform: translateY(-10px);
+}
+.nameCard .logo {
+    position: absolute;
+    width: 75px;
+    height: 24px;
+    bottom: 4%;
+    right: 2%;
+}
+.nameCard span {
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    bottom: 5%;
+    left: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(to left, #006c3a 15%, #004223 80%);
+}
+.mainContainer .helthyCard {
+    position: relative;
+    width: 90%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 10px;
+    background: linear-gradient(to left, #006c3a 15%, #004223 80%);
+}
+.helthyCard .qrCode {
+    position: absolute;
+    width: 75px;
+    height: 74px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    /* padding: 4px; */
+}
+.helthyCard .qrCode img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.qrCodeBorder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.qrCodeBorder .top {
+    position: absolute;
+    top: -8px;
+    right: -4px;
+    width: calc(100% + 8px);
+    height: 4px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: topAni 3s linear infinite;
+}
+.qrCodeBorder .right {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    height: calc(100% + 16px);
+    width: 4px;
+    background: #fff;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: rightAni 3s linear infinite;
+    animation-delay: 0.75s;
+}
+.qrCodeBorder .bottom {
+    position: absolute;
+    bottom: -9px;
+    right: -8px;
+    width: calc(100% + 16px);
+    height: 4px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    animation: bottomAni 3s linear infinite;
+    animation-delay: 1.5s;
+}
+.qrCodeBorder .left {
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    height: calc(100% + 16px);
+    width: 4px;
+    background: #fff;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    animation: leftAni 3s linear infinite;
+    animation-delay: 2.25s;
+}
+
+
+@keyframes topAni {
+    0% {
+        transform: scaleX(0);
+    }
+    25% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    75% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes rightAni {
+    0% {
+        /* transform: scaleX(0); */
+    }
+    25% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+    75% {
+        transform: scaleY(1);
+    }
+    75.01% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+@keyframes bottomAni {
+    0% {
+    }
+    25% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    50.01% {
+        transform: scaleX(0);
+    }
+    76% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+@keyframes leftAni {
+    0% {
+    }
+    25% {
+        transform: scaleY(1);
+    }
+    25.01% {
+        transform: scaleY(0);
+    }
+    75% {
+        transform: scaleY(0);
+    }
+    76% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+.helthyCard .helthState {
+    position: relative;
+    color: #fff;
+    transform: translateX(-35px);
+    line-height: 25px;
+}
+.helthyCard .helthState #mainHelthState {
+    font-size: 1em;
+}
+.helthyCard .helthState #secHelthState {
+    font-size: 0.65em;
+}
+.helthyCard .helthRefraech {
+    position: absolute;
+    width: 17px;
+    top: 15%;
+    left: 4%;
+}
+.servicesTitle {
+    width: 100%;
+    margin: 30px 0 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.servicesTitle a {
+    text-decoration: none;
+}
+.servicesTitle .servicesH1 {
+    color: #38978a;
+    font-size: 18px;
+}
+.servicesTitle .servicesH2 {
+    color: #000;
+    opacity: 0.35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-10px);
+}
+.servicesTitle .servicesH2 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicesTitle .servicesH2 img {
+    width: 25px;
+    height: 25px;
+    transform: rotate(180deg);
+}
+.services {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    margin-bottom: 25px;
+}
+.servicesItems {
+    display: flex;
+    width: fit-content;
+    overflow-x: scroll;
+}
+.servicesItems::-webkit-scrollbar {
+    background: transparent;
+}
+.servicesItems::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+.services::-webkit-scrollbar {
+    background: transparent;
+}
+.services::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+.servicesItem {
+    width: 100px;
+    height: 150px;
+    margin: 5px 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 21px 10px;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 25px;
+}
+.servicesItem input[type="file"] {
+    position: absolute;
+    top: 19%;
+    right: 70%;
+    width: 65px;
+    opacity: 0;
+    z-index: 1;
+}
+.servicesItem img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.tbaaud {
+    width: 90%;
+    margin-bottom: 95px;
+    border-radius: 10px;
+    background: #a94646;
+    color: #fff;
+    text-align: center;
+}
+.tbaaud .underline {
+    text-decoration: underline;
+}
+.servicesMainContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url('../media/nameCaerdBG.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-size: 500px;
+}
+.puplicServices {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.puplicServices .serTitle {
+    margin: 0 15px;
+}
+.puplicServices .servicesContainer {
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.servicesContainer .servicesItem {
+    width: 118px;
+}
